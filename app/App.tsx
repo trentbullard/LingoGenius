@@ -19,9 +19,10 @@ import {
   MD3DarkTheme as darkTheme,
   PaperProvider,
 } from 'react-native-paper';
+import Body from './Body/Body';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
+  const isDarkMode = useColorScheme() === 'dark';
   const theme = isDarkMode ? darkTheme : lightTheme;
   const styles = StyleSheet.create({
     safeArea: {
@@ -39,6 +40,7 @@ function App(): React.JSX.Element {
         />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <Header title="LingoGenius" />
+          <Body />
         </ScrollView>
       </SafeAreaView>
     </PaperProvider>
